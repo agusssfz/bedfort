@@ -1,0 +1,885 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+$color-primario1: #726252;
+$color-primario2: #151515 ;
+$color-secundario: #ffffff;
+$color-secundario2: #e4ddd5;
+$color-terciario: #93877B;
+$color-terciario2: #A98F7E;
+$primary: #93877B;
+$danger: #ff4136;
+$body-color: #93877B;
+$dark:$color-primario2;
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger,
+  "dark":$dark,
+  "bg-dark":$dark,
+  "bg-body-black":$dark,
+  "carousel-dark":$dark,
+  "text-body-secondary":$dark,
+  "text-white": $color-secundario,
+);
+*{
+  box-sizing: border-box;
+}
+
+//tarjetas colchones//
+@media  screen and (max-width:991px) {
+  #colchon .row {
+    width: 80%;
+    margin: auto auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+   
+   }
+   #colchon .row .col-md-6.col-lg-4.col-x4{
+    margin-bottom: 2em;
+
+   }
+   #colchon .card-colchon{
+    
+    max-width: 90% !important;
+    height: 100% !important;
+   }
+}
+
+
+.colchones-card .card-colchon {
+  margin-right:0 !important;
+  right: 0;
+  width: 100% !important;
+}
+
+//seccion oferta//
+#oferta-section{
+  display: flex;
+  flex-direction: row;
+  background-color: $color-terciario2;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.fondo-img {
+    width: 100%;}
+.precio-oferta{
+  font-size: 2em ;
+}
+.bloque {
+  top: 0;
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem !important;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  position: relative;
+  width: 50%;
+  left:auto ;
+  z-index: 1000!important;
+  height: 300px;
+}
+.bloque , .bloque::before{
+  margin: auto auto;
+}
+.bloque a {
+  color: $color-primario2;
+  z-index: 10;
+  font-size: 1.5rem;
+  background-color: $color-secundario;
+  border-radius: 30px;
+  width: 30%;
+  
+}
+.bloque h2, .bloque p {
+  color:  #e4ddd5 !important;z-index: 10;
+}
+.bloque::before {
+  content: '';
+  position:absolute;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  padding-right: 1000px;
+  margin-left: -500px;
+  background-color: $color-primario2 !important;
+  opacity: 75%;
+  z-index: 0 !important;
+  border-radius: 0px 44px 44px 0px;
+  
+}
+#banner3{
+  background: $color-secundario;
+  margin: auto;
+}
+#banner3 title{
+  top: 0;
+  font-weight: bold ;
+  font-stretch: condensed;
+  text-align: left;
+  text-anchor: start;
+  display: inline-block;
+}
+#banner3 .col-4{
+ width: auto;
+  text-align: center;
+  height: 50%;
+  font-size: 0.9em;
+  text-align: left;
+}
+#banner3 .row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  width:  90%;
+  margin: auto;
+  height: 50%;
+gap: 0.1em;
+padding: 0px;
+
+}
+.cards-wrapper{
+  position: relative;
+  background: transparent;
+}
+.fondo{
+    margin:auto auto;
+    max-width: 1440px;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding-top: 33px;
+}
+.fondo > .titulov4 {
+  margin-bottom: 0;
+  padding: 0;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-display: to-upper-case;
+}
+#accordionExample{
+  display: none;
+}
+@media screen and (min-width:426px)and (max-width:767px) {
+  #oferta-section .bloque::before{
+    display: none;
+  }
+  #oferta-section .bloque{
+    height: 70%;
+  }
+  #oferta-section a{
+    width: 70%;
+  
+  }
+  #accordionExample{
+    display: block;
+  }
+  .card:not(:first-child){
+    display: none;
+  }
+  .carousel-indicators{
+    top: 0 !important;
+  height: 2rem !important;
+  }
+  .carousel-indicators > button {
+    margin: 0;
+    width: calc(100%/3)!important;
+    height: calc(100%/3)!important;
+  }
+  #carouselExampleIndicatorsSmall svg{
+    
+   width: 50px;
+   height: 60%;
+  }
+  .cards-wrapper{
+   
+    display: flex;
+    width: 70%;
+    margin:auto auto;
+  }
+  .card{
+    max-width: 100%!important;
+  }
+  
+ #carrusel-tarjetas{
+  display: flex;
+  position: relative;
+  z-index: 10 !important;
+  padding-bottom: 100vh;
+  
+ }
+  .carousel-control-next{
+    margin-right: -1rem ;
+  }
+  .carousel-control-prev, .carousel-control-prev {
+    margin-left: -1rem ;
+  }
+  #carouselExampleIndicators > button , #carouselExampleIndicatorsSmall > button{
+    z-index: 1000;
+    margin-top: 55% !important;
+    
+  }
+}
+.carousel {
+  background: none !important;
+}
+@media screen and (min-width:992px) {
+  #carouselExampleIndicators svg{
+    
+    width: 80px;
+    height: 100%;
+   }
+  #carrusel-tarjetas{
+    position: relative;
+    z-index: 10;
+    margin: auto auto;
+    padding-bottom: 80vh;
+  
+    }
+
+.carousel-indicators{
+  justify-content: space-between !important;
+  position: absolute;
+  
+  color: transparent !important;
+  background-color: transparent !important;
+  z-index: 20 !important;
+}    
+.carousel-indicators > button {
+  
+  margin: 0;
+  
+  width: calc(80%/3)!important;
+  height: calc(10px/3)!important;
+
+}
+.cards-wrapper{
+  display: flex;
+  z-index: 10; 
+  width: 80%;
+  margin: auto auto;
+}
+.card{
+  margin: 1em 0.3em !important;
+  width: calc(100%/3) !important;
+  z-index: 10!important;
+}
+.img-wrapper{
+  height: 22vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control-next {
+  margin-right:  -0.5rem ;
+  top: 8rem !important;
+}
+.carousel-control-prev{
+  top: 8rem !important;
+  margin-left: -0.5rem ;
+}
+#carouselExampleIndicators > button , #carouselExampleIndicatorsSmall > button{
+  z-index: 11;
+  margin-top: 10% !important;
+  
+}
+
+}
+@media screen and (min-width:768px)and (max-width:991px) {
+  #oferta-section .bloque::before{
+    display: none;
+  }
+  #oferta-section .bloque{
+    height: 70%;
+  }
+  #oferta-section a{
+    width: 70%;
+  
+  }
+  #carouselExampleIndicators svg{
+    
+    width: 80px;
+    height: 100%;
+   }
+  #carrusel-tarjetas{
+    position: relative;
+    z-index: 10;
+    margin: auto auto;
+    padding-bottom: 70vh;
+  
+    }
+
+.carousel-indicators{
+  justify-content: space-between !important;
+  position: absolute;
+  
+  color: transparent !important;
+  background-color: transparent !important;
+  z-index: 20 !important;
+}    
+.carousel-indicators > button {
+  
+  margin: 0;
+  
+  width: calc(80%/3)!important;
+  height: calc(10px/3)!important;
+
+}
+.cards-wrapper{
+  display: flex;
+  z-index: 10; 
+  width: 75%;
+  margin: auto auto;
+}
+.card{
+  margin: 1em 0.3em !important;
+  width: calc(100%/3) !important;
+  z-index: 10!important;
+}
+.img-wrapper{
+  height: 22vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control-next {
+  margin-right:  -0.5rem ;
+  top: 8rem !important;
+}
+.carousel-control-prev{
+  top: 8rem !important;
+  margin-left: -0.5rem ;
+}
+#carouselExampleIndicators > button , #carouselExampleIndicatorsSmall > button{
+  z-index: 11;
+  margin-top: 10% !important;
+  
+}
+
+}
+.img-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (min-width:300px) and (max-width:425px) {
+  #oferta-section .bloque::before{
+    display: none;
+  }
+  #oferta-section .bloque{
+    height: 70%;
+  }
+  #oferta-section a{
+    width: 70%;
+  
+  }
+ 
+  #carrusel-tarjetas{
+    height: 20vh;
+    margin-bottom: 80vh;
+  }
+  #accordionExample{
+    display: block;
+  }
+  .baner .row{
+    place-content: center;
+    place-items: center;
+    gap: 0.5em;
+    padding: 0 !important;
+    width: 100% !important;
+    
+  }
+  .baner .row .col-md-4 {
+    
+    font-size: calc(100%/1.5);
+  }
+  .baner .row img {
+    width: 50px ;
+  }
+  
+  .carousel-indicators{
+    top: 0 !important;
+  height: 2rem !important;
+  }
+  .carousel-indicators > button {
+    margin: 0;
+    width: calc(100%/3)!important;
+    height: calc(100%/3)!important;
+  }
+  
+  .carousel-control-next{
+    margin-right: 0.2rem ;
+    background-color: #151515!important;
+    margin-top: 65%;
+  }
+  .cards-wrapper{
+    max-width: 70%;
+    margin: auto auto;
+  }
+  .carousel-control-prev {
+    margin-left: 0.2em ;
+    margin-top: 65%;
+  }
+  #carouselExampleIndicatorsSmall svg{
+    
+    width: 50px;
+    height: 100%;
+   }
+}
+
+
+
+#card-contain h1{
+  color: $color-secundario !important;
+  text-align: center !important;
+  margin-bottom: 10px;
+  letter-spacing: 4px;
+  padding: 20px;
+  font-weight: 600 !important;
+  font-size: 26px !important;
+
+}
+#card-contain{
+  border-radius: 15px;
+  margin-top: 6rem;
+  width: 100%;
+  height: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color-primario1;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 350px;
+  padding: 0;
+}
+
+//header-Cabecera//
+
+header{
+  margin-top: 10vh;
+  display: block;
+}
+@media(max-width:1440px){
+  header{
+    margin-top: 6rem;
+    display: block;
+  }
+  #contenedor-publicidad > video {
+    margin-top: 5px;
+  }
+
+}
+@media (max-width:1024px){ header{
+  margin-top: 6rem;
+  display: block;
+}
+#contenedor-publicidad > video {
+  margin-top: 5px;
+}}
+
+@media (max-width:768px) {
+  header{
+    margin-top: 6rem;
+
+    display: block;
+  }
+  #contenedor-publicidad > video {
+    margin-top: 5px;
+  }
+}
+@media (max-width:654px) {
+  header{
+    margin-top: 6rem;
+
+    display: block;
+  }
+  #contenedor-publicidad > video {
+    margin-top: 5px;
+  }
+}
+@media (max-width:500px) {
+  header{
+    margin-top: 6rem;
+
+    display: block;
+  }
+  #contenedor-publicidad > video {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width:992px) {
+  .menu_desk{
+    display: none;}
+  .menu_mobile {
+    animation-name: open-nav;
+    animation-duration: 150ms;
+    animation-delay: 25ms;
+    animation-fill-mode: inherit;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    margin-bottom: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+  }
+}
+@keyframes open-nav {
+  0%{height: 0;}
+  100% {height: 50vh;}
+}
+@keyframes close-nav  { 
+  0%{height: 50vh;}
+  100% {height: 0;}
+}
+
+@media (max-width:992px)  {
+  .fix-nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: none;
+  }
+}
+@media (min-width: 992px){
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+ }}
+
+
+//categorias de productos//
+.categorias .pad:hover img{
+  filter: brightness(0.5);
+}
+.categorias .pad:hover a{
+  z-index: 1;
+}
+.categorias .pad a {
+  color:#e4ddd5;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  z-index: -1;
+  text-decoration: double;
+}
+.categorias .titulov4 {
+padding-top: 0;
+
+}
+
+.categorias {
+  max-width: 1400px;
+  margin: auto auto ;
+  background-color: $color-primario2;
+  padding: 1rem;
+  margin-bottom: 20px!important;
+  padding-bottom: 20px!important;
+  
+}
+.categorias img {
+  width: 100%;
+  vertical-align: middle;
+  padding: 0.5rem;
+}
+.categorias .pad {
+  position: relative;
+}
+
+
+
+//menu desktop--menu escritorio//
+.menu_desk {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.navbar-toggle {
+  position: relative;
+  left: 20px !important;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+//menu mobile--menu celular//
+.menu_mobile{
+  display: none;
+}
+@media (max-width: 991px) {
+  .submenu {display: none;}
+  .collapse.show > ul {
+    
+    display: block !important;
+  }
+  .navbar-nav .col-md-6 {width: 100%;}
+  .nav .col-md-6 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: inherit !important;
+  }
+  .menu_desk { display: none;}
+}
+.logomobile{
+  margin-left: -20px;
+  display: none;}
+@keyframes  slider-logo {
+  0% { margin-left: -20px; }
+  100% { margin-left: 0px;}
+}
+@media (max-width:  991px){
+  .logomobile {
+      top: 43px;
+      
+      width: 160px;
+      margin: auto;
+      z-index: 99999999999999 !important;
+      display: block !important;  
+  }
+  .logomobile > a >img  {
+   animation-name: slider-logo;
+   animation-duration:  800ms;
+   animation-delay: 200ms; 
+   animation-fill-mode: initial;
+   margin-left: -20% !important;
+  }
+  .logodesk{
+    display: none;
+  }
+}
+.titulov4 {
+  color: $color-secundario2 !important;
+  text-align: center !important;
+  margin-bottom: 31px;
+  letter-spacing: 4px;
+  padding-top: 33px;
+  font-weight: normal !important;
+  font-size: 26px !important;
+}
+
+#container-nav {
+  height: 60px;
+  margin-top: 20px;
+}
+.carousel {
+  
+  background-color: #93877B;
+  width: 100%;
+  height: 25px;z-index: 999999 !important;
+}
+.carousel-item > h1{
+ 
+  
+  display: inline-flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content:center;
+  align-content: center;
+  font-size: 20px;
+  
+  }
+.carousel-item h1 {
+  width: 100%;
+  height: 100%;
+  color: #fff !important;
+  z-index: 10000 !important;
+  font-size: bold large;
+ 
+  
+}
+#navbar{
+  width: 100%;
+  height: auto;
+  z-index: 99999;
+  top: 0 !important;
+  display: block;
+  position: fixed;
+}
+@media (min-width: 600px){
+  #navbar .submenu img {
+      display: block;
+      margin: auto auto 10px auto;
+  }}
+  .submenu .col-md-4 {
+      width: 19% !important;
+      padding: 0 !important;
+  }
+  #navbar .submenu .container a {
+    text-decoration: none;
+    outline: none;
+  }
+  #navbar .submenu .container {
+   
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+#navbar .submenu .tituloh1 {
+  border: none;
+}
+#navbar .submenu img:hover{
+  opacity: 0.5;
+} 
+#navbar .submenu img {
+    display:inline-block;
+}
+.nav .col-md-6 {
+  position: inherit !important;
+      }   
+a{
+    text-decoration: none;
+    color: white;
+    outline: 0;
+}
+#navbar .submenu .item {
+width: 100%;
+}
+.navbar-inverse {
+ 
+  border: none;
+  border-radius: 0;
+  font-size: 16px;
+  }
+#menudesktop  {
+  flex-wrap: wrap !important;
+  padding: 0;
+  margin: 0;
+  margin-left: 1.5rem;
+}
+#menudesktop  .nav-link{
+  top: -0.5rem;
+  text-decoration: none;outline: none;
+  position: relative;
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+   
+}
+.navbar-nav {
+  text-align: center;
+  float: none;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+#sub-nav:hover > .submenu {
+  animation: both aparecer 200ms;
+  display: block;
+  z-index: 1;
+}
+
+.submenu{
+  position: absolute;
+  display: none;
+  left: 0;
+  right: 0;
+  background-color: #151515;
+  top: 80px;
+  text-align: center;
+  padding: 19px;
+  z-index: 0;
+  height: 0;
+  
+}
+@keyframes aparecer {
+  
+ 0%{
+  height: 0%;}
+ 
+  
+ 100%{ height: 200%;
+  }
+}
+ul .nav-item a{         
+  margin: 0;
+  padding: 20px;
+}
+.nav{
+  margin-top: 20px!important;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  display: block;
+ 
+}
+@media (max-width: 600px){
+.banner2 {
+    padding: 12px 0 12px 0;
+    margin-top: 0;
+    margin-bottom: 6px;
+}}
+
+.baner{
+  padding: 20px;
+  background-color: #726252;
+  margin-bottom: 33px;
+}
+.baner ul li {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  color: #e4ddd5;
+  font-size: 16px;
+  vertical-align: top;
+  line-height: 16px;
+}
+
+.baner ul {
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+
+}
+a.nav-link  {
+  text-decoration: none;
+  color: white;
+  height: max-content;
+  font-size: 1rem;
+  font-weight:300;
+  font-stretch: narrower;
+  text-transform: uppercase;
+}
+a.nav-link.active{
+  color: rgb(253, 251, 251) !important;
+}
+a.nav-link:hover {
+background-color: #2e3033 !important;
+color: rgb(253, 251, 251)!important;
+
+}
+input.form-control {
+  background-color: transparent !important;
+  border-radius: 0px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px white solid, 
+}
+#contenedor-publicidad{
+  width: 100%;
+  margin: 0;
+  
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Then add additional custom code here

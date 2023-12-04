@@ -1,0 +1,41 @@
+
+@media screen and (max-width:991px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    footer h5 {
+        font-size: 1.2em;
+        width: 100%;
+        left: 0;
+    }
+    footer a {
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+    footer i {
+        font-size: 30px;
+    }
+    footer p, footer strong{
+    font-size: 1rem;
+    }
+    footer .item-footer{
+        display: inline-flex;
+        margin-left: 0;
+        font-size: small;
+    }
+   
+}
+@media screen and (min-width:992px) {
+    footer a {
+        text-decoration: none;
+        font-size: 1.8em;
+    }
+    footer i {
+        font-size: 30px;
+    }
+    footer p, footer strong{
+    font-size: 1.2rem;
+    }
+}
+
